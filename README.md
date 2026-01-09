@@ -1,69 +1,106 @@
 # AI-game-NAA-dragon
-CI/CD project
-Часть 2: Настройка GitHub Actions и GitLab CI – первый workflow и деплой
 
-В первой статье мы разобрались с основами CI/CD: что это такое, зачем нужно и какие инструменты существуют. Теперь пришло время перейти от теории к практике – создадим наши первые рабочие CI/CD-конвейеры на GitHub Actions и GitLab CI.
+## Refactored Mathematical Operations Library
 
-Вот небольшая карта для навигации между частями:
+This project demonstrates a refactored mathematical operations library with enhanced functionality and improved error handling in both JavaScript and Python.
 
-Часть 1: Основы CI/CD – что это и зачем нужно; GitHub Actions и GitLab CI
+### Features
 
-Часть 2: Настройка GitHub Actions и GitLab CI – первый workflow и деплой
+- **Basic Math Operations**: Addition, subtraction, multiplication, and division
+- **Type Validation**: Ensures both parameters are numbers
+- **Error Handling**: Proper error messages for invalid inputs
+- **Comprehensive Tests**: Full test coverage for all operations
+- **Documentation**: Clear JSDoc/Python docstrings for all functions
 
-^ Вы сейчас здесь ^
+### JavaScript Implementation
 
-Часть3: CI/CD – ветки, условия, секреты и окружения
+The JavaScript implementation includes:
 
-Терминология
-В мире CI/CD используется множество специфических терминов. Вот краткий словарик, который поможет вам лучше понимать документацию и обсуждения:
+- `sum(a, b)`: Adds two numbers
+- `subtract(a, b)`: Subtracts b from a
+- `multiply(a, b)`: Multiplies two numbers
+- `divide(a, b)`: Divides a by b
 
-Workflow – сценарий автоматизации, описанный в YAML-файле на GitHub Actions.
+### Python Implementation
 
-Job – отдельная задача в workflow или pipeline, которая выполняется на одном runner-е.
+The Python implementation includes:
 
-Runner – виртуальная машина или контейнер, на котором исполняются задачи.
+- `sum(a, b)`: Adds two numbers
+- `subtract(a, b)`: Subtracts b from a
+- `multiply(a, b)`: Multiplies two numbers
+- `divide(a, b)`: Divides a by b
 
-Step – отдельный шаг внутри job-а, например, команда или action.
+### Testing
 
-YAML – формат файла, используемый для описания workflow и pipeline. Отступы в нём критически важны!
+To run the tests:
 
-Script – раздел с командами в GitLab CI-файле.
+```bash
+npm test          # Run both JavaScript and Python tests
+npm run test-js   # Run only JavaScript tests
+python3 test.py   # Run only Python tests
+```
 
-Action – готовое действие на GitHub, которое можно использовать в своих workflow, например, actions/checkout.
+### Original Project Context
 
-Stage – этап pipeline в GitLab, например, build, test, deploy.
+This project was originally part of a CI/CD tutorial series:
 
-Artifact – файл или набор файлов, созданный во время выполнения job-а и сохранённый для использования в других job-ах или для скачивания.
+Part 2: Setting up GitHub Actions and GitLab CI - first workflow and deployment
 
-Environment – среда, в которую выполняется деплой, например, staging или production.
+In the first article, we covered the basics of CI/CD: what it is, why it's needed, and what tools exist. Now it's time to move from theory to practice - let's create our first CI/CD pipelines on GitHub Actions and GitLab CI.
 
-Не переживайте, если сразу не запомните все термины – они станут понятнее по мере практики.
+Here's a navigation map between parts:
 
-Итоги
-В этой статье мы:
+Part 1: CI/CD Basics - What it is and why it's needed; GitHub Actions and GitLab CI
 
-Создали репозитории на GitHub и GitLab.
+Part 2: Setting up GitHub Actions and GitLab CI - first workflow and deployment
 
-Настроили первые workflow и pipeline.
+^ You are here ^
 
-Автоматизировали деплой статического сайта.
+Part 3: CI/CD - branches, conditions, secrets, and environments
 
-Добавили автоматические тесты.
+Terminology
+In the world of CI/CD, many specific terms are used. Here's a brief dictionary to help you better understand documentation and discussions:
 
-Построили полноценный CI/CD-конвейер, который проверяет и публикует код при каждом изменении.
+Workflow – an automation scenario described in a YAML file on GitHub Actions.
 
-Теперь при каждом пуше в ветку main автоматически выполняются тесты, и если они проходят успешно, сайт обновляется. Команде больше не нужно вручную запускать проверку – теперь ошибки видны сразу, а деплой происходит автоматически.
+Job – a separate task in a workflow or pipeline that runs on one runner.
 
-Это только начало вашего путешествия в мир CI/CD. В следующей статье мы рассмотрим более сложные сценарии: работу с разными ветками, условное выполнение шагов, использование секретов для безопасного хранения чувствительных данных и лучшие практики настройки CI/CD для реальных проектов.
+Runner – a virtual machine or container on which tasks are executed.
 
-А пока – экспериментируйте с тем, что вы узнали сегодня. Добавьте больше тестов, попробуйте другие actions, настройте деплой для своего проекта. Практика – лучший способ закрепить знания.
+Step – a separate step inside a job, for example, a command or action.
 
-До встречи в следующей статье!
+YAML – the file format used to describe workflows and pipelines. Indents in it are critically important!
 
-Теги:
+Script – a section with commands in a GitLab CI file.
+
+Action – a ready-made action on GitHub that you can use in your workflows, for example, actions/checkout.
+
+Stage – a pipeline stage in GitLab, for example, build, test, deploy.
+
+Artifact – a file or set of files created during job execution and saved for use in other jobs or for downloading.
+
+Environment – the environment to which deployment is performed, for example, staging or production.
+
+Don't worry if you don't immediately remember all the terms – they will become clearer with practice.
+
+Results
+In this article we:
+
+Created repositories on GitHub and GitLab.
+Set up first workflows and pipelines.
+Automated deployment of a static website.
+Added automatic tests.
+Built a complete CI/CD pipeline that checks and publishes code on every change.
+
+Now with every push to the main branch, tests are automatically run, and if they pass successfully, the site updates. The team no longer needs to manually run checks – now errors are visible immediately, and deployment happens automatically.
+
+This is just the beginning of your journey into the world of CI/CD. In the next article, we'll look at more complex scenarios: working with different branches, conditional execution of steps, using secrets for secure storage of sensitive data, and best practices for setting up CI/CD for real projects.
+
+Until next time!
+
+Tags:
 github actions
 gitlab-ci
 cic
 devops
 automation
-Хабы:DevOpsGitHubPythonJavaScript

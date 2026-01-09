@@ -2,6 +2,7 @@
   "name": "my-first-cicd",
   "version": "1.0.0",
   "scripts": {
-    "test": "node test.js"
+    "test": "npm run test-js && python3 test.py",
+    "test-js": "node test.js"
   }
 }
