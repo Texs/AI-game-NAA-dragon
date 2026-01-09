@@ -1,7 +1,20 @@
 {
-  "name": "my-first-cicd",
+  "name": "ai-game-naa-dragon-cicd",
   "version": "1.0.0",
+  "description": "CI/CD demonstration project with JavaScript and Python implementations",
+  "main": "src/js/calculator.js",
   "scripts": {
-    "test": "node test.js"
-  }
+    "test": "node tests/js/calculator.test.js",
+    "test:js": "node tests/js/calculator.test.js",
+    "start": "node src/js/demo.js",
+    "demo": "node src/js/demo.js"
+  },
+  "keywords": [
+    "cicd",
+    "javascript",
+    "python",
+    "calculator"
+  ],
+  "author": "AI-game-NAA-dragon",
+  "license": "MIT"
 }

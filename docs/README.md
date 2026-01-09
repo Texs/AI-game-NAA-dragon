@@ -1,4 +1,4 @@
-# AI-game-NAA-dragon - Refactored CI/CD Project
+# AI-game-NAA-dragon - Refactored
 
 ## Overview
 This is a refactored version of the CI/CD demonstration project. The original simple implementation has been enhanced with better structure, comprehensive functionality, and improved testing.
@@ -41,13 +41,6 @@ npm run test:js
 ```bash
 python tests/python/calculator.test.py
 ```
-
-## CI/CD Project Context
-This project was originally created as part of a CI/CD tutorial series. The original content was about:
-- Setting up GitHub Actions and GitLab CI
-- Creating the first workflow and deployment
-- Automating testing and deployment of static sites
-- Building complete CI/CD pipelines
 
 ## License
 MIT
