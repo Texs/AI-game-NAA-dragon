@@ -1,8 +1,23 @@
 {
-  "name": "my-first-cicd",
+  "name": "ai-game-naa-dragon",
   "version": "1.0.0",
+  "description": "CI/CD project for AI-game-NAA-dragon",
+  "main": "app.js",
   "scripts": {
-    "test": "npm run test-js && python3 test.py",
-    "test-js": "node test.js"
+    "test": "node test.js",
+    "start": "node app.js",
+    "lint": "eslint .",
+    "security-audit": "npm audit"
+  },
+  "keywords": [
+    "cicd",
+    "devops",
+    "github-actions",
+    "gitlab-ci"
+  ],
+  "author": "AI-game-NAA-dragon Project",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0"
   }
 }
