@@ -1,15 +1,11 @@
 /**
- * Adds two numbers together
- * @param {number} a - First number
- * @param {number} b - Second number
- * @returns {number} Sum of a and b
+ * Main calculator module
+ * Provides backward compatibility while using the new modular structure
  */
-function sum(a, b) {
-    // Input validation
-    if (typeof a !== 'number' || typeof b !== 'number') {
-        throw new Error('Both arguments must be numbers');
-    }
-    return a + b;
-}
 
-module.exports = { sum };
+// Import from new structure to maintain modularity
+import { sum } from './src/js/calculator.js';
+
+// For CommonJS compatibility in older Node environments
+export default { sum };
+export { sum };

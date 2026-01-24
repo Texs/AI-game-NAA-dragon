@@ -4,6 +4,12 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.Python
+venv/
+.venv/
+.env
+.env.local
+*.env.*
 
 # Node.js
 node_modules/
@@ -11,16 +17,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Dependencies
-package-lock.json
+# Build outputs
+dist/
+build/
+target/
 
 # IDE
 .vscode/
-
-# Environment
-.env
-.env.local
-*.env.*
+.idea/
+*.swp
+*.swo
 
 # Logs
 *.log
@@ -30,7 +36,18 @@ package-lock.json
 coverage/
 htmlcov/
 
-# Testing
-.pytest_cache/
-.mypy_cache/
+# OS
+.DS_Store
+Thumbs.db
+
+# Compressed
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
 ```
