@@ -1,7 +1,14 @@
 {
   "name": "my-first-cicd",
   "version": "1.0.0",
+  "description": "A mathematical operations library with CI/CD integration",
+  "main": "app.js",
   "scripts": {
-    "test": "node test.js"
-  }
+    "test": "node test.js",
+    "test:py": "python test.py",
+    "start": "node app.js"
+  },
+  "keywords": ["math", "ci/cd", "testing"],
+  "author": "AI Assistant",
+  "license": "MIT"
 }

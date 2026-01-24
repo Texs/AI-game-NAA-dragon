@@ -1,69 +1,78 @@
 # AI-game-NAA-dragon
-CI/CD project
-Часть 2: Настройка GitHub Actions и GitLab CI – первый workflow и деплой
+CI/CD project - Mathematical Operations Library
 
-В первой статье мы разобрались с основами CI/CD: что это такое, зачем нужно и какие инструменты существуют. Теперь пришло время перейти от теории к практике – создадим наши первые рабочие CI/CD-конвейеры на GitHub Actions и GitLab CI.
+This project demonstrates a comprehensive CI/CD setup with automated testing for both JavaScript and Python applications. It provides basic arithmetic functions with input validation and extensive test coverage.
 
-Вот небольшая карта для навигации между частями:
+## Features
 
-Часть 1: Основы CI/CD – что это и зачем нужно; GitHub Actions и GitLab CI
+- Basic arithmetic operations (addition, subtraction, multiplication, division)
+- Input validation with appropriate error handling
+- Comprehensive test coverage for both JavaScript and Python implementations
+- CI/CD integration for automated testing
 
-Часть 2: Настройка GitHub Actions и GitLab CI – первый workflow и деплой
+## Project Structure
 
-^ Вы сейчас здесь ^
+```
+├── app.js          # JavaScript implementation
+├── app.py          # Python implementation  
+├── test.js         # JavaScript tests
+├── test.py         # Python tests
+├── package.json    # Node.js configuration
+├── .eslintrc.json  # JavaScript linting configuration
+├── CONTRIBUTING.md # Contribution guidelines
+└── README.md       # This file
+```
 
-Часть3: CI/CD – ветки, условия, секреты и окружения
+## Setup Instructions
 
-Терминология
-В мире CI/CD используется множество специфических терминов. Вот краткий словарик, который поможет вам лучше понимать документацию и обсуждения:
+### Prerequisites
+- Node.js (v14 or higher)
+- Python (v3.6 or higher)
 
-Workflow – сценарий автоматизации, описанный в YAML-файле на GitHub Actions.
+### Installation
+1. Clone the repository
+2. Navigate to the project directory
+3. Install dependencies (if any): `npm install`
 
-Job – отдельная задача в workflow или pipeline, которая выполняется на одном runner-е.
+## Usage
 
-Runner – виртуальная машина или контейнер, на котором исполняются задачи.
+### Running JavaScript Tests
+```bash
+npm test
+```
 
-Step – отдельный шаг внутри job-а, например, команда или action.
+### Running Python Tests
+```bash
+python test.py
+```
 
-YAML – формат файла, используемый для описания workflow и pipeline. Отступы в нём критически важны!
+Or using npm script:
+```bash
+npm run test:py
+```
 
-Script – раздел с командами в GitLab CI-файле.
+### Using the Library
 
-Action – готовое действие на GitHub, которое можно использовать в своих workflow, например, actions/checkout.
+#### JavaScript
+```javascript
+const { sum, subtract, multiply, divide } = require('./app');
 
-Stage – этап pipeline в GitLab, например, build, test, deploy.
+console.log(sum(2, 3));      // 5
+console.log(divide(10, 2));  // 5
+```
 
-Artifact – файл или набор файлов, созданный во время выполнения job-а и сохранённый для использования в других job-ах или для скачивания.
+#### Python
+```python
+from app import sum, subtract, multiply, divide
 
-Environment – среда, в которую выполняется деплой, например, staging или production.
+print(sum(2, 3))      # 5
+print(divide(10, 2))  # 5.0
+```
 
-Не переживайте, если сразу не запомните все термины – они станут понятнее по мере практики.
+## Contributing
 
-Итоги
-В этой статье мы:
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
 
-Создали репозитории на GitHub и GitLab.
+## License
 
-Настроили первые workflow и pipeline.
-
-Автоматизировали деплой статического сайта.
-
-Добавили автоматические тесты.
-
-Построили полноценный CI/CD-конвейер, который проверяет и публикует код при каждом изменении.
-
-Теперь при каждом пуше в ветку main автоматически выполняются тесты, и если они проходят успешно, сайт обновляется. Команде больше не нужно вручную запускать проверку – теперь ошибки видны сразу, а деплой происходит автоматически.
-
-Это только начало вашего путешествия в мир CI/CD. В следующей статье мы рассмотрим более сложные сценарии: работу с разными ветками, условное выполнение шагов, использование секретов для безопасного хранения чувствительных данных и лучшие практики настройки CI/CD для реальных проектов.
-
-А пока – экспериментируйте с тем, что вы узнали сегодня. Добавьте больше тестов, попробуйте другие actions, настройте деплой для своего проекта. Практика – лучший способ закрепить знания.
-
-До встречи в следующей статье!
-
-Теги:
-github actions
-gitlab-ci
-cic
-devops
-automation
-Хабы:DevOpsGitHubPythonJavaScript
+This project is licensed under the MIT License.
