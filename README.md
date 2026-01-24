@@ -75,57 +75,88 @@ print(divide(10, 2))  # 5.0
 CI/CD project
 Часть 2: Настройка GitHub Actions и GitLab CI – первый workflow и деплой
 
-В первой статье мы разобрались с основами CI/CD: что это такое, зачем нужно и какие инструменты существуют. Теперь пришло время перейти от теории к практике – создадим наши первые рабочие CI/CD-конвейеры на GitHub Actions и GitLab CI.
+CI/CD project demonstrating automated workflows with GitHub Actions and GitLab CI.
 
-Вот небольшая карта для навигации между частями:
+## Overview
 
-Часть 1: Основы CI/CD – что это и зачем нужно; GitHub Actions и GitLab CI
+This project demonstrates how to set up CI/CD pipelines for both GitHub Actions and GitLab CI. It includes automated testing, building, and deployment processes that trigger on code changes.
 
-Часть 2: Настройка GitHub Actions и GitLab CI – первый workflow и деплой
+## Features
 
-^ Вы сейчас здесь ^
+- JavaScript and Python application code
+- Automated testing for both languages
+- Static site deployment
+- Code quality enforcement with ESLint
+- Security auditing capabilities
 
-Часть3: CI/CD – ветки, условия, секреты и окружения
+## Getting Started
 
-Терминология
-В мире CI/CD используется множество специфических терминов. Вот краткий словарик, который поможет вам лучше понимать документацию и обсуждения:
+### Prerequisites
 
-Workflow – сценарий автоматизации, описанный в YAML-файле на GitHub Actions.
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Python (v3.6 or higher)
 
-Job – отдельная задача в workflow или pipeline, которая выполняется на одном runner-е.
+### Installation
 
-Runner – виртуальная машина или контейнер, на котором исполняются задачи.
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd ai-game-naa-dragon
+   ```
 
-Step – отдельный шаг внутри job-а, например, команда или action.
+2. Install Node.js dependencies:
+   ```bash
+   npm install
+   ```
 
-YAML – формат файла, используемый для описания workflow и pipeline. Отступы в нём критически важны!
+### Running Tests
 
-Script – раздел с командами в GitLab CI-файле.
+To run JavaScript tests:
+```bash
+npm test
+```
 
-Action – готовое действие на GitHub, которое можно использовать в своих workflow, например, actions/checkout.
+To run Python tests:
+```bash
+python test.py
+```
 
-Stage – этап pipeline в GitLab, например, build, test, deploy.
+### Additional Scripts
 
-Artifact – файл или набор файлов, созданный во время выполнения job-а и сохранённый для использования в других job-ах или для скачивания.
+- Start the application: `npm start`
+- Lint JavaScript code: `npm run lint`
+- Audit security vulnerabilities: `npm run security-audit`
 
-Environment – среда, в которую выполняется деплой, например, staging или production.
+## Project Structure
 
-Не переживайте, если сразу не запомните все термины – они станут понятнее по мере практики.
+- `app.js` - Main JavaScript application logic with input validation
+- `app.py` - Main Python application logic with input validation
+- `test.js` - Comprehensive JavaScript unit tests
+- `test.py` - Comprehensive Python unit tests
+- `index.html` - Main HTML page for the CI/CD project
+- `package.json` - Node.js package configuration
+- `.eslintrc.json` - ESLint configuration for code quality
+- `README.md` - Project documentation
+- `CONTRIBUTING.md` - Contribution guidelines
 
-Итоги
-В этой статье мы:
+## CI/CD Pipeline
 
-Создали репозитории на GitHub и GitLab.
+The project implements a CI/CD pipeline that:
+1. Runs tests on code changes
+2. Validates code quality
+3. Performs security audits
+4. Deploys the static site automatically when tests pass
 
-Настроили первые workflow и pipeline.
+## Contributing
 
-Автоматизировали деплой статического сайта.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-Добавили автоматические тесты.
+## License
 
-Построили полноценный CI/CD-конвейер, который проверяет и публикует код при каждом изменении.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Теперь при каждом пуше в ветку main автоматически выполняются тесты, и если они проходят успешно, сайт обновляется. Команде больше не нужно вручную запускать проверку – теперь ошибки видны сразу, а деплой происходит автоматически.
+## Acknowledgments
 
 Это только начало вашего путешествия в мир CI/CD. В следующей статье мы рассмотрим более сложные сценарии: работу с разными ветками, условное выполнение шагов, использование секретов для безопасного хранения чувствительных данных и лучшие практики настройки CI/CD для реальных проектов.
 
@@ -145,3 +176,5 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute t
 ## License
 
 This project is licensed under the MIT License.
+- Part 2: Setting up GitHub Actions and GitLab CI - first workflow and deployment
+- Based on CI/CD fundamentals and best practices

@@ -77,3 +77,11 @@ def divide(a, b):
     if b == 0:
         raise ZeroDivisionError("Division by zero is not allowed")
     return a / b
+Main calculator module
+Provides backward compatibility while using the new modular structure
+"""
+
+from src.py.math_operations import sum
+
+# Make sure sum is available at the module level for backward compatibility
+__all__ = ['sum']
