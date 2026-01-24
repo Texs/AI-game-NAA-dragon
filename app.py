@@ -1,21 +1,9 @@
 """
-Module for basic mathematical operations
+Main calculator module
+Provides backward compatibility while using the new modular structure
 """
 
-def sum(a, b):
-    """
-    Adds two numbers together
-    
-    Args:
-        a (int/float): First number
-        b (int/float): Second number
-        
-    Returns:
-        int/float: Sum of a and b
-        
-    Raises:
-        TypeError: If either argument is not a number
-    """
-    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-        raise TypeError("Both arguments must be numbers")
-    return a + b
+from src.py.math_operations import sum
+
+# Make sure sum is available at the module level for backward compatibility
+__all__ = ['sum']

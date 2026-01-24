@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "CI/CD project for AI-game-NAA-dragon",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "node test.js",
     "start": "node app.js",
@@ -15,7 +16,7 @@
     "github-actions",
     "gitlab-ci"
   ],
-  "author": "AI-game-NAA-dragon Project",
+  "author": "AI-game-naa-dragon Project",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.0.0"
