@@ -1,100 +1,94 @@
-# Mathematical Operations Library
+# AI Calculator with GUI
 
-This project demonstrates a comprehensive CI/CD setup with automated testing for both JavaScript and Python applications. It provides basic arithmetic functions with input validation and extensive test coverage.
+This project includes two calculator applications with graphical user interfaces built using Python's tkinter library, plus recommendations for building an AI calculator:
+
+1. **Basic Calculator (gui_app.py)** - A traditional calculator with buttons for standard operations
+2. **AI Calculator (ai_calculator.py)** - A natural language calculator that can interpret mathematical expressions written in English
+
+## How to Run
+
+To run either calculator, use Python 3:
+
+```bash
+# For the basic calculator
+python gui_app.py
+
+# For the AI calculator
+python ai_calculator.py
+```
 
 ## Features
 
-- Basic arithmetic operations (addition, subtraction, multiplication, division)
-- Input validation with appropriate error handling
-- Comprehensive test coverage for both JavaScript and Python implementations
-- CI/CD integration for automated testing
-- **NEW: Modular Architecture**: Clean separation of concerns with refactored codebase
+### Basic Calculator
+- Standard arithmetic operations (+, -, *, /)
+- Square root (√)
+- Sign change (±)
+- Clear (C) functionality
+- Clean and intuitive interface
 
-## Project Structure
+### AI Calculator
+- Natural language processing for mathematical expressions
+- Supports both symbolic and verbal operations
+- Calculation history tracking
+- Examples of supported expressions
+- Safe evaluation of expressions
+## Recommendations for Building an AI Calculator
 
-```
-├── app.js          # JavaScript implementation (now uses modular structure)
-├── app.py          # Python implementation (now uses modular structure)
-├── test.js         # JavaScript test runner
-├── test.py         # Python test runner
-├── src/            # Source modules
-│   ├── js/
-│   │   ├── calculator.js  # Calculator wrapper functions
-│   │   └── math.js        # Core MathOperations class
-│   └── py/
-│       └── math_operations.py  # Python MathOperations class
-├── tests/          # Dedicated test files
-│   ├── js/
-│   │   └── calculator.test.js  # JavaScript unit tests
-│   └── py/
-│       └── test_math_operations.py  # Python unit tests
-├── package.json    # Node.js configuration
-├── .eslintrc.json  # JavaScript linting configuration
-├── CONTRIBUTING.md # Contribution guidelines
-└── README.md       # This file
-```
+Here are key recommendations for developing an effective AI calculator:
 
-## Refactoring Summary
+### 1. Natural Language Processing
+- Implement keyword recognition for mathematical operations
+- Handle variations in phrasing ("plus", "add", "sum" all mean addition)
+- Support for both symbolic and verbal input methods
 
-During the refactoring process, several key improvements were made:
+### 2. Expression Parsing
+- Develop a robust parser that converts natural language to mathematical expressions
+- Handle operator precedence correctly
+- Support for parentheses and complex expressions
 
-1. **Consolidated Code**: Removed duplicate implementations and centralized logic in the `src/` directory
-2. **Fixed Package Configuration**: Corrected malformed package.json with proper syntax
-3. **Improved Modularity**: Better separation between core logic and API interfaces
-4. **Enhanced Documentation**: Added JSDoc/Python docstrings to all functions
-5. **Unified API**: Consistent function names and signatures across languages
-6. **Better Error Handling**: Consistent error types and messages
-7. **Cleaner Test Structure**: Organized tests into dedicated directories with separate test files
-8. **Backward Compatibility**: Maintained API compatibility while improving internal structure
+### 3. Safety Considerations
+- Implement safe evaluation methods to prevent code injection
+- Validate inputs before processing
+- Provide error handling for invalid expressions
 
-## Setup Instructions
+### 4. User Experience
+- Provide clear examples of supported expressions
+- Maintain a calculation history
+- Offer both keyboard and mouse input options
+- Responsive design that works well on different screen sizes
 
-### Prerequisites
-- Node.js (v14 or higher)
-- Python (v3.6 or higher)
+### 5. Mathematical Functions
+- Support for basic arithmetic operations
+- Scientific functions (trigonometry, logarithms, exponents)
+- Constants (π, e) for advanced calculations
 
-### Installation
-1. Clone the repository
-2. Navigate to the project directory
-3. Install dependencies (if any): `npm install`
+### 6. Extensibility
+- Modular design to easily add new functions
+- Plugin architecture for custom operations
+- Configurable settings for different user preferences
 
-## Usage
+## Supported Operations in the AI Calculator
 
-### Running JavaScript Tests
-```bash
-npm test
-```
+The AI calculator recognizes these operations:
+- Addition: "add", "plus", "sum"
+- Subtraction: "subtract", "minus", "less"
+- Multiplication: "multiply", "times", "product"
+- Division: "divide", "divided by", "over"
+- Exponents: "power", "to the power of", "raised to"
+- Square root: "square root", "root"
+- Logarithms: "log", "logarithm"
+- Trigonometric functions: "sin", "cos", "tan"
 
-### Running Python Tests
-```bash
-python test.py
-```
+Example inputs:
+- "What is 5 plus 3?"
+- "Calculate 10 times 25"
+- "Find the square root of 64"
+- "What is 2 to the power of 8?"
 
-Or using npm script:
-```bash
-npm run test:py
-```
+## Requirements
 
-### Using the Library
+- Python 3.x
+- tkinter (usually included with Python)
+- math module (included with Python)
 
-#### JavaScript
-```javascript
-import { sum, subtract, multiply, divide } from './app.js';
-
-console.log(sum(2, 3));      // 5
-console.log(divide(10, 2));  // 5
-```
-
-#### Python
-```python
-from app import sum, subtract, multiply, divide
-
-print(sum(2, 3))      # 5
-print(divide(10, 2))  # 5.0
-```
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
-
-## License
-
-This project is licensed under the MIT License.
+No external dependencies are required for this implementation.
