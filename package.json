@@ -1,6 +1,16 @@
 {
   "name": "ai-game-naa-dragon",
   "version": "1.0.0",
+  "description": "A mathematical operations library with CI/CD integration",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js",
+    "test:py": "python test.py",
+    "start": "node app.js"
+  },
+  "keywords": ["math", "ci/cd", "testing"],
+  "author": "Sergey Sukhinin",
+  "license": "MIT"
   "description": "CI/CD project for AI-game-NAA-dragon",
   "main": "app.js",
   "type": "module",
