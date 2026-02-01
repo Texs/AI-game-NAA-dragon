@@ -106,3 +106,55 @@ def sum(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
         TypeError: If either argument is not a number
     """
     return MathOperations.add(a, b)
+
+
+def subtract(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
+    """
+    Subtracts b from a (for backward compatibility)
+    
+    Args:
+        a (int/float): First number
+        b (int/float): Number to subtract
+        
+    Returns:
+        int/float: Difference of a and b
+        
+    Raises:
+        TypeError: If either argument is not a number
+    """
+    return MathOperations.subtract(a, b)
+
+
+def multiply(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
+    """
+    Multiplies two numbers (for backward compatibility)
+    
+    Args:
+        a (int/float): First number
+        b (int/float): Second number
+        
+    Returns:
+        int/float: Product of a and b
+        
+    Raises:
+        TypeError: If either argument is not a number
+    """
+    return MathOperations.multiply(a, b)
+
+
+def divide(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
+    """
+    Divides a by b (for backward compatibility)
+    
+    Args:
+        a (int/float): First number
+        b (int/float): Number to divide by
+        
+    Returns:
+        int/float: Quotient of a and b
+        
+    Raises:
+        TypeError: If either argument is not a number
+        ZeroDivisionError: If b is zero
+    """
+    return MathOperations.divide(a, b)
