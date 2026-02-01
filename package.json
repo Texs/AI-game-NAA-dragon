@@ -3,30 +3,16 @@
   "version": "1.0.0",
   "description": "A mathematical operations library with CI/CD integration",
   "main": "app.js",
-  "scripts": {
-    "test": "node test.js",
-    "test:py": "python test.py",
-    "start": "node app.js"
-  },
-  "keywords": ["math", "ci/cd", "testing"],
-  "author": "Sergey Sukhinin",
-  "license": "MIT"
-  "description": "CI/CD project for AI-game-NAA-dragon",
-  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "node test.js",
+    "test:py": "python test.py",
     "start": "node app.js",
     "lint": "eslint .",
     "security-audit": "npm audit"
   },
-  "keywords": [
-    "cicd",
-    "devops",
-    "github-actions",
-    "gitlab-ci"
-  ],
-  "author": "AI-game-naa-dragon Project",
+  "keywords": ["math", "ci/cd", "testing"],
+  "author": "Sergey Sukhinin",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.0.0"

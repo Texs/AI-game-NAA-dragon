@@ -1,5 +1,4 @@
-# AI-game-NAA-dragon
-CI/CD project - Mathematical Operations Library
+# Mathematical Operations Library
 
 This project demonstrates a comprehensive CI/CD setup with automated testing for both JavaScript and Python applications. It provides basic arithmetic functions with input validation and extensive test coverage.
 
@@ -9,19 +8,44 @@ This project demonstrates a comprehensive CI/CD setup with automated testing for
 - Input validation with appropriate error handling
 - Comprehensive test coverage for both JavaScript and Python implementations
 - CI/CD integration for automated testing
+- **NEW: Modular Architecture**: Clean separation of concerns with refactored codebase
 
 ## Project Structure
 
 ```
-├── app.js          # JavaScript implementation
-├── app.py          # Python implementation  
-├── test.js         # JavaScript tests
-├── test.py         # Python tests
+├── app.js          # JavaScript implementation (now uses modular structure)
+├── app.py          # Python implementation (now uses modular structure)
+├── test.js         # JavaScript test runner
+├── test.py         # Python test runner
+├── src/            # Source modules
+│   ├── js/
+│   │   ├── calculator.js  # Calculator wrapper functions
+│   │   └── math.js        # Core MathOperations class
+│   └── py/
+│       └── math_operations.py  # Python MathOperations class
+├── tests/          # Dedicated test files
+│   ├── js/
+│   │   └── calculator.test.js  # JavaScript unit tests
+│   └── py/
+│       └── test_math_operations.py  # Python unit tests
 ├── package.json    # Node.js configuration
 ├── .eslintrc.json  # JavaScript linting configuration
 ├── CONTRIBUTING.md # Contribution guidelines
 └── README.md       # This file
 ```
+
+## Refactoring Summary
+
+During the refactoring process, several key improvements were made:
+
+1. **Consolidated Code**: Removed duplicate implementations and centralized logic in the `src/` directory
+2. **Fixed Package Configuration**: Corrected malformed package.json with proper syntax
+3. **Improved Modularity**: Better separation between core logic and API interfaces
+4. **Enhanced Documentation**: Added JSDoc/Python docstrings to all functions
+5. **Unified API**: Consistent function names and signatures across languages
+6. **Better Error Handling**: Consistent error types and messages
+7. **Cleaner Test Structure**: Organized tests into dedicated directories with separate test files
+8. **Backward Compatibility**: Maintained API compatibility while improving internal structure
 
 ## Setup Instructions
 
@@ -55,7 +79,7 @@ npm run test:py
 
 #### JavaScript
 ```javascript
-const { sum, subtract, multiply, divide } = require('./app');
+import { sum, subtract, multiply, divide } from './app.js';
 
 console.log(sum(2, 3));      // 5
 console.log(divide(10, 2));  // 5
@@ -69,112 +93,8 @@ print(sum(2, 3))      # 5
 print(divide(10, 2))  # 5.0
 ```
 
-## Contributing
-
-# AI-game-NAA-dragon
-CI/CD project
-Часть 2: Настройка GitHub Actions и GitLab CI – первый workflow и деплой
-
-CI/CD project demonstrating automated workflows with GitHub Actions and GitLab CI.
-
-## Overview
-
-This project demonstrates how to set up CI/CD pipelines for both GitHub Actions and GitLab CI. It includes automated testing, building, and deployment processes that trigger on code changes.
-
-## Features
-
-- JavaScript and Python application code
-- Automated testing for both languages
-- Static site deployment
-- Code quality enforcement with ESLint
-- Security auditing capabilities
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-- Python (v3.6 or higher)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd ai-game-naa-dragon
-   ```
-
-2. Install Node.js dependencies:
-   ```bash
-   npm install
-   ```
-
-### Running Tests
-
-To run JavaScript tests:
-```bash
-npm test
-```
-
-To run Python tests:
-```bash
-python test.py
-```
-
-### Additional Scripts
-
-- Start the application: `npm start`
-- Lint JavaScript code: `npm run lint`
-- Audit security vulnerabilities: `npm run security-audit`
-
-## Project Structure
-
-- `app.js` - Main JavaScript application logic with input validation
-- `app.py` - Main Python application logic with input validation
-- `test.js` - Comprehensive JavaScript unit tests
-- `test.py` - Comprehensive Python unit tests
-- `index.html` - Main HTML page for the CI/CD project
-- `package.json` - Node.js package configuration
-- `.eslintrc.json` - ESLint configuration for code quality
-- `README.md` - Project documentation
-- `CONTRIBUTING.md` - Contribution guidelines
-
-## CI/CD Pipeline
-
-The project implements a CI/CD pipeline that:
-1. Runs tests on code changes
-2. Validates code quality
-3. Performs security audits
-4. Deploys the static site automatically when tests pass
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-Это только начало вашего путешествия в мир CI/CD. В следующей статье мы рассмотрим более сложные сценарии: работу с разными ветками, условное выполнение шагов, использование секретов для безопасного хранения чувствительных данных и лучшие практики настройки CI/CD для реальных проектов.
-
-А пока – экспериментируйте с тем, что вы узнали сегодня. Добавьте больше тестов, попробуйте другие actions, настройте деплой для своего проекта. Практика – лучший способ закрепить знания.
-
-До встречи в следующей статье!
-
-Теги:
-github actions
-gitlab-ci
-cic
-devops
-automation
-Хабы:DevOpsGitHubPythonJavaScript
 Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
 
 ## License
 
 This project is licensed under the MIT License.
-- Part 2: Setting up GitHub Actions and GitLab CI - first workflow and deployment
-- Based on CI/CD fundamentals and best practices
