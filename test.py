@@ -25,23 +25,29 @@ def test_sum_decimal_numbers():
 
 def test_sum_invalid_inputs():
     """Test that invalid inputs raise TypeError"""
+    # Test string input
+    raised = False
     try:
         sum("a", 5)
-        assert False, "Should have raised TypeError for string input"
     except TypeError:
-        pass  # Expected behavior
+        raised = True
+    assert raised, "Should have raised TypeError for string input"
     
+    # Test None input
+    raised = False
     try:
         sum(5, None)
-        assert False, "Should have raised TypeError for None input"
     except TypeError:
-        pass  # Expected behavior
+        raised = True
+    assert raised, "Should have raised TypeError for None input"
     
+    # Test list input
+    raised = False
     try:
         sum([1, 2], 3)
-        assert False, "Should have raised TypeError for list input"
     except TypeError:
-        pass  # Expected behavior
+        raised = True
+    assert raised, "Should have raised TypeError for list input"
 
 def run_test(test_func):
     """Helper function to run individual tests"""
