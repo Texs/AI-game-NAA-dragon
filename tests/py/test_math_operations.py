@@ -2,7 +2,10 @@
 Unit tests for the math operations module
 """
 import sys
-from src.py.math_operations import MathOperations, sum
+import os
+# Add the src directory to the path so we can import modules from it
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+from src.py.math_operations import MathOperations, sum, subtract, multiply, divide
 
 
 def test_sum_positive_numbers():

@@ -4,8 +4,8 @@
  */
 
 // Import from new structure to maintain modularity
-import { sum } from './src/js/calculator.js';
+import { sum, subtract, multiply, divide } from './src/js/calculator.js';
 
 // For CommonJS compatibility in older Node environments
-export default { sum };
-export { sum };
+export default { sum, subtract, multiply, divide };
+export { sum, subtract, multiply, divide };

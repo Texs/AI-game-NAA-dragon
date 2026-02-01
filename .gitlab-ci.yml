@@ -1,0 +1,45 @@
+stages:
+  - test
+
+variables:
+  NODE_VERSION: "16"
+  PYTHON_VERSION: "3.9"
+
+before_script:
+  - echo "Setting up environment..."
+  - node --version
+  - npm --version
+  - python --version
+
+javascript_test:
+  stage: test
+  image: node:${NODE_VERSION}
+  script:
+    - npm install
+    - npm test
+  artifacts:
+    when: always
+    reports:
+      junit: junit_report.xml
+
+python_test:
+  stage: test
+  image: python:${PYTHON_VERSION}
+  script:
+    - python test.py
+  artifacts:
+    when: always
+    reports:
+      junit: python_junit_report.xml
+
+both_test:
+  stage: test
+  image: node:${NODE_VERSION}-python:${PYTHON_VERSION}
+  script:
+    - npm install
+    - npm test
+    - python test.py
+  artifacts:
+    when: always
+    reports:
+      junit: combined_junit_report.xml
